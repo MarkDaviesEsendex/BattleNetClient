@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Starcraft\Request\" />
+    <Folder Include="WorldOfWarcraft\" />
+    <Folder Include="Overwatch\" />
+  </ItemGroup>
+
+</Project>
