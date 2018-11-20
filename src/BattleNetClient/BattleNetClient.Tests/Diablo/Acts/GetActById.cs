@@ -1,21 +1,18 @@
 ﻿using System.Collections.Generic;
 using System.Net;
-using System.Net.Http;
 using System.Threading.Tasks;
-using BattleNetClient.Diablo;
 using BattleNetClient.Diablo.Models;
 using BattleNetClient.Testing;
-using BattleNetClient.Tests.ClientFactoryTests;
 using Newtonsoft.Json;
 using Xunit;
 
 namespace BattleNetClient.Tests.Diablo.Acts
 {
-    public class GetAct
+    public class GetActById
     {
         private readonly BattleNetClientFactory _factory;
 
-        public GetAct()
+        public GetActById()
         {
             var server = new BattleNetServerBuilder()
                 .CreateClientCredentials("clientId", "clientSecret")

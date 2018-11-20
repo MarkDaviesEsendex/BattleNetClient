@@ -12,7 +12,7 @@ namespace BattleNetClient
 
     public class Result<T> : IResult<T>
     {
-        public Result(bool isValid, T data, HttpStatusCode code)
+        private Result(bool isValid, T data, HttpStatusCode code)
         {
             IsValid = isValid;
             Data = data;
@@ -23,7 +23,7 @@ namespace BattleNetClient
         public T Data { get; }
         public HttpStatusCode Code { get; }
         
-        public static Result<T> Success(T data) 
+        public static IResult<T> Success(T data) 
             => new Result<T>(true, data, HttpStatusCode.OK);
 
         public static IResult<T> Failure(T data, HttpStatusCode statusCode) 
