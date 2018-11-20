@@ -15,8 +15,9 @@ namespace BattleNetClient.Testing
         {
             Task.Run(async () =>
             {
-                await _server.GetClient().PostAsync("/oauth/clientInfo", new {clientId, clientSecret}, new JsonMediaTypeFormatter());
-            });
+                await _server.GetClient().PostAsync("/oauth/clientInfo", new {clientId, clientSecret},
+                    new JsonMediaTypeFormatter());
+            }).Wait();
             return this;
         }
 
