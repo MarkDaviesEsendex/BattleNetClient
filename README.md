@@ -11,7 +11,7 @@ var client = await _factory.CreateClientAsync("clientId", "clientSecret");
 
 *Note*: to aquire a client id and a client seecret please go and see the documentation for the blizzard api: https://develop.battle.net/, I am not in charge of this.
 
-## Check validaity
+## Check validity
 If the api pases back an invalid status code (anything not in the 200 range) the sdk will pass back an invalid client, to check this please use the `IsClientValid` property, the client will allow you to interact with it (specified later in the readme) but will _always_ return invalid results.
 
 Whilst people may disagree with this approach, I always feel that a _good_ library will always return objects that the consuming code can interact with.
