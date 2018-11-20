@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BattleNetClient", "BattleNe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BattleNetClient.Tests", "BattleNetClient.Tests\BattleNetClient.Tests.csproj", "{A70979DA-F2E1-4E09-A097-18A9EB6C29B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BattleNetClient.Testing", "BattleNetClient.Testing\BattleNetClient.Testing.csproj", "{95C06F4B-080A-437F-877A-D0C09DF8A54B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BattleNetClient.Testing", "BattleNetClient.Testing\BattleNetClient.Testing.csproj", "{95C06F4B-080A-437F-877A-D0C09DF8A54B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

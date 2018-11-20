@@ -9,7 +9,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Starcraft\Request\" />
     <Folder Include="WorldOfWarcraft\" />
     <Folder Include="Overwatch\" />
   </ItemGroup>
