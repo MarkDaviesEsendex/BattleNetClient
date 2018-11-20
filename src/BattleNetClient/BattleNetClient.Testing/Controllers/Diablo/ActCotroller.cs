@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using BattleNetClient.Testing.Models.Diablo;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
@@ -21,21 +22,5 @@ namespace BattleNetClient.Testing.Controllers.Diablo
                 return NotFound();
             return Ok(JsonConvert.DeserializeObject<Act>(_acts[actId]));
         }
-    }
-    
-    public class Act
-    {
-        public string Slug { get; set; }
-        public int Number { get; set; }
-        public string Name { get; set; }
-
-        public List<Quest> Quests { get; set; } = new List<Quest>();
-    }
-    
-    public class Quest
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Slug { get; set; }
     }
 }

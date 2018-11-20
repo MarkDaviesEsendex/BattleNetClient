@@ -1,5 +1,4 @@
-﻿
-namespace BattleNetClient.Diablo
+﻿namespace BattleNetClient.Diablo
 {
     public interface IDiabloClient
     {

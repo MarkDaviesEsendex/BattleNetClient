@@ -37,7 +37,6 @@ namespace BattleNetClient.Testing.Controllers
 
             var token = _tokenRepository.InsertRecord(new Token { AccessToken = Guid.NewGuid().ToString()});
             return Ok(new TokenResponse { AccessToken = token.AccessToken});
-
         }
 
         [HttpPost("clientInfo")]

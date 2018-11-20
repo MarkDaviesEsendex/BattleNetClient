@@ -6,8 +6,6 @@ namespace BattleNetClient.Diablo.Models
     {
         public static Act Empty => new NullAct();
         
-        
-        
         public virtual string Slug { get; }
         public virtual int Number { get; }
         public virtual string Name { get; }

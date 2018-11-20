@@ -11,7 +11,6 @@ namespace BattleNetClient.Testing.Data
         public AuthenticationDbContext(DbContextOptions options)
             : base(options)
         {
-            
         }
     }
 }
