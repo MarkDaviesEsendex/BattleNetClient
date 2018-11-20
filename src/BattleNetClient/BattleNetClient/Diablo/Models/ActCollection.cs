@@ -6,6 +6,5 @@ namespace BattleNetClient.Diablo.Models
     {
         public static ActCollection Empty => new NullActCollection();
         public virtual List<Act> Acts { get; } = new List<Act>();
-
     }
 }
