@@ -17,7 +17,7 @@ namespace BattleNetClient.Tests.Diablo.Acts
                 .CreateClientCredentials("clientId", "clientSecret")
                 .Build();
 
-            _factory = new BattleNetClientFactory(Region.UnitedStates, server.GetClient());
+            _factory = new BattleNetClientFactory(BattleNetRegion.UnitedStates, server.GetClient());
         }
 
         [Fact]

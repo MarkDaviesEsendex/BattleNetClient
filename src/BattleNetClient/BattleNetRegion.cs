@@ -1,6 +1,6 @@
 ﻿namespace BattleNetClient
 {
-    public enum Region
+    public enum BattleNetRegion
     {
         UnitedStates
     }

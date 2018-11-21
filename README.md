@@ -2,10 +2,9 @@
 This is a c# library that will allow you to interact with the blizzard apis, in a clean testable way - that's the hope anyway.
 
 # Usage
-
-
 ## Create a client:
 ```
+var factory = new BattleNetClientFactory(Region.UnitedStates);
 var client = await _factory.CreateClientAsync("clientId", "clientSecret");
 ```
 
@@ -18,10 +17,17 @@ Whilst people may disagree with this approach, I always feel that a _good_ libra
 
 ## Query the api:
 ```
-var actualActResult = await client.Diablo.Act.GetByIdAsync(1);
+var factory = new BattleNetClientFactory(Region.UnitedStates);
+var client = await factory.CreateClientAsync("clientId", "clientSecret");
+
+if(client.IsValid)
+{
+    // Get act by id
+    var actualActResult = await client.Diablo.Act.GetByIdAsync(1);
+}
 ```
 
-This will pas pack a result object:
+This will pass back a result object:
 ```
 public interface IResult<out T>
 {
@@ -48,8 +54,6 @@ I have split the project into three libraries:
 * Client Testing
 
 My hope is that I will post both the client and the client testing libraries onto nuget, and you can simply take advantage of the code I've used to test my code, for example, to test acts:
-
-
 ```
 // Create fake server
 var server = new BattleNetServerBuilder()
