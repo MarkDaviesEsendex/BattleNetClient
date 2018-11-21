@@ -4,6 +4,7 @@ This is a c# library that will allow you to interact with the blizzard apis, in 
 # Usage
 ## Create a client:
 ```
+var factory = new BattleNetClientFactory(Region.UnitedStates);
 var client = await _factory.CreateClientAsync("clientId", "clientSecret");
 ```
 
@@ -16,7 +17,7 @@ Whilst people may disagree with this approach, I always feel that a _good_ libra
 
 ## Query the api:
 ```
-var factory = new BattleNetClientFactory(Region.UnitedStates, server.GetClient());
+var factory = new BattleNetClientFactory(Region.UnitedStates);
 var client = await factory.CreateClientAsync("clientId", "clientSecret");
 
 if(client.IsValid)
