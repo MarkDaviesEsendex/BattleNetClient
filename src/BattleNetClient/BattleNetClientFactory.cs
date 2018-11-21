@@ -10,12 +10,12 @@ namespace BattleNetClient
 {
     public class BattleNetClientFactory
     {
-        private readonly Region _region;
+        private readonly BattleNetRegion _battleNetRegion;
         private readonly HttpClient _client;
 
-        public BattleNetClientFactory(Region region, HttpClient client = null)
+        public BattleNetClientFactory(BattleNetRegion battleNetRegion, HttpClient client = null)
         {
-            _region = region;
+            _battleNetRegion = battleNetRegion;
             _client = client ?? new HttpClient();
         }
 
@@ -41,7 +41,7 @@ namespace BattleNetClient
 
         private Clients.BattleNetClient CreateClient()
         {
-            var clientHelper = new ClientHelper(_client, _region);
+            var clientHelper = new ClientHelper(_client, _battleNetRegion);
             var actClient = new ActClient(clientHelper);
             var diabloClient = new DiabloClient(actClient);
             return new Clients.BattleNetClient(diabloClient);

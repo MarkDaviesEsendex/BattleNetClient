@@ -4,13 +4,13 @@ namespace BattleNetClient.Clients
 {
     public class ClientHelper
     {
-        public ClientHelper(HttpClient client, Region region)
+        public ClientHelper(HttpClient client, BattleNetRegion battleNetRegion)
         {
             Client = client;
-            Region = region;
+            BattleNetRegion = battleNetRegion;
         }
 
         public HttpClient Client { get; }
-        public Region Region { get; }
+        public BattleNetRegion BattleNetRegion { get; }
     }
 }
